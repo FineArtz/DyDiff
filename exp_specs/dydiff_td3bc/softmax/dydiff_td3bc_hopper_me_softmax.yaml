@@ -1,0 +1,85 @@
+meta_data:
+  script_path: run_scripts/dydiff_td3bc_script.py
+  exp_name: dydiff_td3bc_hopper_me_v2_softmax
+  description: Train an agent using DyDiff+TD3BC
+  gpu: [0]
+  num_workers: 1
+  using_gpus: true
+# -----------------------------------------------------------------------------
+variables:
+  seed: [0]
+
+# -----------------------------------------------------------------------------
+constants:
+  dataset_name: 'hopper_me_v2'
+  debug: false
+
+  rl_trainer_params:
+    num_epochs: 2000
+    num_train_steps_per_train_call: 500
+    num_steps_per_eval: 5000
+    max_path_length: 1000
+    batch_size: 256
+    replay_buffer_size: 2000000
+    model_replay_buffer_size: 2000000
+
+    rollout_batch_size: 2048
+    each_rollout_size: 2048
+    real_ratio: 0.6
+    rollout_length: -1
+    rollout_freq: 1
+
+    save_best: true
+    freq_saving: 10
+    save_replay_buffer: false
+    save_model_replay_buffer: true
+    keep_condition:
+      filter_type: softmax
+      threshold: 0.6
+      softmax_temp: 0.05
+
+  model_params:
+    rew_net_size: 256
+    rew_num_hidden_layers: 2
+    lr: 0.001
+    early_stopping_patience: 7
+    holdout_ratio: 0.2
+    max_holdout: 5000
+    batch_size: 256
+    log_freq: 100
+    load_path: 'models/reward_model/hopper_me_v2/rew_model_scaled_seed0.pkl'
+
+  dyn_model_params:
+    dyn_net_size: 200
+    dyn_num_hidden_layers: 4
+    num_nets: 7
+    num_elites: 5
+    load_path: 'models/dynamics_model/hopper_me_v2/dynamics_model_gaussian_scaled_nets7_elites5_seed0.pkl'
+  
+  diff_model_params:
+    model_paths: [
+      models/diffusion/state-action-cond/hopper_me_v2/network-snapshot-003000-34431715.pkl
+    ]
+
+  td3_bc_params:
+    discount: 0.99
+    net_size: 256
+    num_hidden_layers: 2
+
+  env_specs:
+    env_name: 'hopper'
+    env_kwargs: {}
+    env_num: 4 # This parameter define how many vec envs are created
+    eval_env_seed: 0 # These two seeds are no longer needed since in our implementation we makes all seeds the same, see the script file, however you can change the script to make it valid
+    training_env_seed: 0
+    normalize_obs: true
+
+  sampler_kwargs:
+    S_churn: 60
+    S_max: 52.241950650433864
+    S_min: 0.3699492132558657
+    S_noise: 1.002
+    num_steps: 34
+    is_normalized: true
+    iterative_times: 2
+

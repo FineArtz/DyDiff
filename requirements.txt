@@ -1,0 +1,16 @@
+torch
+wandb
+git+https://github.com/Farama-Foundation/d4rl@master#egg=d4rl
+cython<3
+opencv-python
+matplotlib
+joblib
+tensorboard
+einops
+numpy
+typing
+imageio
+moviepy
+envpool
+pandas
+gtimer

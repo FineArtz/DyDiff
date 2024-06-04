@@ -1,0 +1,46 @@
+meta_data:
+  script_path: run_scripts/diffql_script.py
+  exp_name: diffql_hopper_me_v2_base
+  description: Train an agent using DiffQl
+  gpu: [0]
+  num_workers: 1
+  using_gpus: true
+# -----------------------------------------------------------------------------
+variables:
+  seed: [0]
+
+# -----------------------------------------------------------------------------
+constants:
+  dataset_name: 'hopper_me_v2'
+  debug: false
+
+  rl_trainer_params:
+    num_epochs: 2000
+    num_train_steps_per_train_call: 500
+    num_steps_per_eval: 5000
+    max_path_length: 1000
+    batch_size: 256
+    replay_buffer_size: 2000000
+
+  diffql_params:
+    net_size: 256
+    num_hidden_layers: 2
+    reward_scale: 1.0
+    discount: 0.99
+    tau: 0.005
+    max_q_backup: false
+    beta_schedule: 'vp'
+    n_timesteps: 5
+    eta: 1.0
+    lr: 0.0003
+    lr_decay: false
+    grad_norm: 5.0
+    use_pred_start: true
+
+  env_specs:
+    env_name: 'hopper'
+    env_kwargs: {}
+    env_num: 4 # This parameter define how many vec envs are created
+    eval_env_seed: 0 # These two seeds are no longer needed since in our implementation we makes all seeds the same, see the script file, however you can change the script to make it valid
+    training_env_seed: 0
+    normalize_obs: true

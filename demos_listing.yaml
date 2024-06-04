@@ -1,0 +1,238 @@
+# Put names and directories of datasets in this file.
+# The followings are demonstrations of D4RL datasets.
+
+hopper_rd:
+  description: "Hopper, random"
+  file_paths: [
+    traj_dataset/hopper-random-v0.pkl
+  ]
+
+hopper_md:
+  description: "Hopper, medium"
+  file_paths: [
+    traj_dataset/hopper-medium-v0.pkl
+  ]
+
+hopper_mr:
+  description: "Hopper, medium replay"
+  file_paths: [
+    traj_dataset/hopper-medium-replay-v0.pkl
+  ]
+
+hopper_me:
+  description: "Hopper, medium expert"
+  file_paths: [
+    traj_dataset/hopper-medium-expert-v0.pkl
+  ]
+
+hopper_ex:
+  description: "Hopper, expert"
+  file_paths: [
+    traj_dataset/hopper-expert-v0.pkl
+  ]
+
+walker2d_rd:
+  description: "Walker2d, random"
+  file_paths: [
+    traj_dataset/walker2d-random-v0.pkl
+  ]
+
+walker2d_md:
+  description: "Walker2d, medium"
+  file_paths: [
+    traj_dataset/walker2d-medium-v0.pkl
+  ]
+
+walker2d_mr:
+  description: "Walker2d, medium replay"
+  file_paths: [
+    traj_dataset/walker2d-medium-replay-v0.pkl
+  ]
+
+walker2d_me:
+  description: "Walker2d, medium expert"
+  file_paths: [
+    traj_dataset/walker2d-medium-expert-v0.pkl
+  ]
+
+walker2d_ex:
+  description: "Walker2d, expert"
+  file_paths: [
+    traj_dataset/walker2d-expert-v0.pkl
+  ]
+
+halfcheetah_rd:
+  description: "HalfCheetah, random"
+  file_paths: [
+    traj_dataset/halfcheetah-random-v0.pkl
+  ]
+
+halfcheetah_md:
+  description: "HalfCheetah, medium"
+  file_paths: [
+    traj_dataset/halfcheetah-medium-v0.pkl
+  ]
+
+halfcheetah_mr:
+  description: "HalfCheetah, medium replay"
+  file_paths: [
+    traj_dataset/halfcheetah-medium-replay-v0.pkl
+  ]
+
+halfcheetah_me:
+  description: "HalfCheetah, medium expert"
+  file_paths: [
+    traj_dataset/halfcheetah-medium-expert-v0.pkl
+  ]
+
+halfcheetah_ex:
+  description: "HalfCheetah, expert"
+  file_paths: [
+    traj_dataset/halfcheetah-expert-v0.pkl
+  ]
+
+antmaze_umaze:
+  description: "AntMaze, umaze"
+  file_paths: [
+    traj_dataset/antmaze-umaze-v0.pkl
+  ]
+
+antmaze_umaze_diverse:
+  description: "AntMaze, umaze diverse"
+  file_paths: [
+    traj_dataset/antmaze-umaze-diverse-v0.pkl
+  ]
+
+antmaze_medium_diverse:
+  description: "AntMaze, medium diverse"
+  file_paths: [
+    traj_dataset/antmaze-medium-diverse-v0.pkl
+  ]
+
+antmaze_medium_play:
+  description: "AntMaze, medium play"
+  file_paths: [
+    traj_dataset/antmaze-medium-play-v0.pkl
+  ]
+
+antmaze_large_diverse:
+  description: "AntMaze, large diverse"
+  file_paths: [
+    traj_dataset/antmaze-large-diverse-v0.pkl
+  ]
+
+antmaze_large_play:
+  description: "AntMaze, large play"
+  file_paths: [
+    traj_dataset/antmaze-large-play-v0.pkl
+  ]
+
+maze2d_umaze:
+  description: "PointMaze, umaze"
+  file_paths: [
+    traj_dataset/maze2d-umaze-v1.pkl
+  ]
+
+maze2d_medium:
+  description: "PointMaze, medium"
+  file_paths: [
+    traj_dataset/maze2d-medium-v1.pkl
+  ]
+
+maze2d_large:
+  description: "PointMaze, large"
+  file_paths: [
+    traj_dataset/maze2d-large-v1.pkl
+  ]
+
+# D4RL v2 dataset
+
+hopper_rd_v2:
+  description: "Hopper, random"
+  file_paths: [
+    traj_dataset/hopper-random-v2.pkl
+  ]
+
+hopper_md_v2:
+  description: "Hopper, medium"
+  file_paths: [
+    traj_dataset/hopper-medium-v2.pkl
+  ]
+
+hopper_mr_v2:
+  description: "Hopper, medium replay"
+  file_paths: [
+    traj_dataset/hopper-medium-replay-v2.pkl
+  ]
+
+hopper_me_v2:
+  description: "Hopper, medium expert"
+  file_paths: [
+    traj_dataset/hopper-medium-expert-v2.pkl
+  ]
+
+hopper_ex_v2:
+  description: "Hopper, expert"
+  file_paths: [
+    traj_dataset/hopper-expert-v2.pkl
+  ]
+
+walker2d_rd_v2:
+  description: "Walker2d, random"
+  file_paths: [
+    traj_dataset/walker2d-random-v2.pkl
+  ]
+
+walker2d_md_v2:
+  description: "Walker2d, medium"
+  file_paths: [
+    traj_dataset/walker2d-medium-v2.pkl
+  ]
+
+walker2d_mr_v2:
+  description: "Walker2d, medium replay"
+  file_paths: [
+    traj_dataset/walker2d-medium-replay-v2.pkl
+  ]
+
+walker2d_me_v2:
+  description: "Walker2d, medium expert"
+  file_paths: [
+    traj_dataset/walker2d-medium-expert-v2.pkl
+  ]
+
+walker2d_ex_v2:
+  description: "Walker2d, expert"
+  file_paths: [
+    traj_dataset/walker2d-expert-v2.pkl
+  ]
+
+halfcheetah_rd_v2:
+  description: "HalfCheetah, random"
+  file_paths: [
+    traj_dataset/halfcheetah-random-v2.pkl
+  ]
+
+halfcheetah_md_v2:
+  description: "HalfCheetah, medium"
+  file_paths: [
+    traj_dataset/halfcheetah-medium-v2.pkl
+  ]
+
+halfcheetah_mr_v2:
+  description: "HalfCheetah, medium replay"
+  file_paths: [
+    traj_dataset/halfcheetah-medium-replay-v2.pkl
+  ]
+
+halfcheetah_me_v2:
+  description: "HalfCheetah, medium expert"
+  file_paths: [
+    traj_dataset/halfcheetah-medium-expert-v2.pkl
+  ]
+
+halfcheetah_ex_v2:
+  description: "HalfCheetah, expert"
+  file_paths: [
+    traj_dataset/halfcheetah-expert-v2.pkl
+  ]
